@@ -1,13 +1,17 @@
 import { useState } from 'react'
 import './App.css'
-import NewsCard from './components/NewsCard'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ListPage from "./pages/ListPage.jsx";
+import ArticlePage from "./pages/ArticlePage.jsx";
 
 function App() {
-
   return (
-    <>
-  <NewsCard/>
-    </>
+    <Router>
+      <Routes>
+          <Route path="/" element={<ListPage/>}/>
+          <Route path="/articlePage" element={<ArticlePage/>}/>
+      </Routes>
+    </Router>
   )
 }
 

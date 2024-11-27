@@ -1,8 +1,18 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function NewsCard() {
+    const nevigate=useNavigate();
+
+    const handleCardClick = ()=>{
+        nevigate(`/articlePage`)
+    };
+
   return (
-    <section id="NewsCard">
+    <section 
+        id="NewsCard"
+        onClick={handleCardClick}
+    >
         <div id="content">
             <h3>Card Title</h3>
             <p id="content">description of the card</p>
@@ -13,7 +23,6 @@ function NewsCard() {
         <div id="CardImage">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD3BfG2IcF-2BNXb5OUBWWfK7DAbOuuBrdQA&s" alt="title" className="card-image"/>
         </div>
-        <button className="card-button">button</button>
     </section>
   )
 }
