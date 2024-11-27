@@ -1,33 +1,32 @@
 /* Card.css */
 #card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 300px;
+    border: 1px solid #a8a4a4;
+    border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 16px;
     cursor: pointer;
+    display: flex;
+    /* width: 70vw; */
+    align-items: center;
+    width:100%;  /* This will ensure the card takes full width of its container */
+    height: auto; /* Height should adjust automatically based on content */
 }
-
-#card-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+#CardImage{
+    flex: 0 0 40%;
+    flex-basis: 40%;
 }
-
+img{
+    width: 100%; /* Ensure the image takes up the full container width */
+    height: auto; /* Maintain image aspect ratio */
+    border-radius: 25px;
+}
 #content {
-    padding: 16px;
+    flex: 1; /* Content takes the remaining space (60% in this case) */
+    padding: 15px; /* Add some padding to make it look better */
 }
 
 h3{
     font-size: 1.5rem;
-    margin: 0 0 8px;
-}
-
-#content{
-    font-size: 1rem;
-    margin: 0 0 16px;
-    color: #666;
 }
 
 #card:hover {

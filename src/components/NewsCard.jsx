@@ -16,7 +16,7 @@ function NewsCard() {
     >
         <div id="content">
             <h3>Card Title</h3>
-            <p id="content">description of the card</p>
+            {/* <p id="content">description of the card</p> */}
             <p id="details">
                 <span> author</span> | <span>date</span> | <span>source</span>| <span>country</span>
             </p>

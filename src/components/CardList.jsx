@@ -1,9 +1,12 @@
 import React from 'react'
 import NewsCard from './NewsCard.jsx';
+import './CardList.css'
 
 function CardList() {
   return (
-    <div><NewsCard/></div>
+    <section id='CardList'>
+        <div><NewsCard/></div>
+    </section>
   )
 }
 
