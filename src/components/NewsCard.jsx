@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import './Card.css'
 
 function NewsCard() {
     const nevigate=useNavigate();
@@ -10,7 +11,7 @@ function NewsCard() {
 
   return (
     <section 
-        id="NewsCard"
+        id="card"
         onClick={handleCardClick}
     >
         <div id="content">

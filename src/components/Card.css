@@ -1,44 +1,35 @@
 /* Card.css */
-.card {
+#card {
     border: 1px solid #ddd;
     border-radius: 8px;
     width: 300px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 16px;
+    cursor: pointer;
 }
 
-.card-image {
+#card-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-.card-content {
+#content {
     padding: 16px;
 }
 
-.card-title {
+h3{
     font-size: 1.5rem;
     margin: 0 0 8px;
 }
 
-.card-description {
+#content{
     font-size: 1rem;
     margin: 0 0 16px;
     color: #666;
 }
 
-.card-button {
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.card-button:hover {
-    background-color: #0056b3;
+#card:hover {
+    background-color: #fffdbb;
 }
