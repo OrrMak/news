@@ -5,7 +5,12 @@ import './CardList.css'
 function CardList() {
   return (
     <section id='CardList'>
-        <div><NewsCard/></div>
+        <ul>
+            <li><NewsCard/></li>
+            <li><NewsCard/></li>
+            <li><NewsCard/></li>
+            <li><NewsCard/></li>
+        </ul>   
     </section>
   )
 }

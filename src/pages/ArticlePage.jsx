@@ -1,8 +1,9 @@
 import React from 'react'
+import Article from '../components/Article'
 
 function ArticlePage() {
   return (
-    <div>ArticlePage</div>
+    <div><Article/></div>
   )
 }
 

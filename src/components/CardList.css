@@ -1,4 +1,11 @@
 #CardList{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    height: 80vh;
+    width: 80vw;
+}
+ul{
+    list-style: none;
+    /* padding-left: 0;     */
 }
