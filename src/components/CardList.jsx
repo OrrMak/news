@@ -3,6 +3,9 @@ import NewsCard from './NewsCard.jsx';
 import './CardList.css'
 // import { fetchNews } from "../utils/api.js";
 import './../../public/localData.json'
+import { v4 as uuidv4 } from 'uuid';
+
+
 function CardList() {
 
     const [isLoading,setIsLoading]=useState(true);
@@ -45,7 +48,13 @@ function CardList() {
             return response.json(); 
         })
         .then(data=>setArticles(data))
-        .catch(error=>console.error('Error fetching JSON:', error));
+        .catch((error)=> {
+            setError(error.message);
+            console.log(error);
+        })
+        .finally(()=>{
+            setIsLoading(false);
+        });
     },[])
 
     if(isLoading){
@@ -63,7 +72,7 @@ function CardList() {
         <section id='CardList'>
             {articles.map((article,index)=>(
                 <NewsCard
-                    key={index}
+                    key={index}   // Use index temporarily as the key
                     title={article.title}
                     author={article.author}
                     date={article.published_at}
