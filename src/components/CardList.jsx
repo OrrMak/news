@@ -47,7 +47,16 @@ function CardList() {
             }
             return response.json(); 
         })
-        .then(data=>setArticles(data))
+        .then(data=>{
+            const newArray= data.map(article => ({
+                ...article, /// same as writing title: article.title, author: article.author,date: article.date...
+                id: uuidv4(),
+            }));
+            setArticles(newArray);
+            })
+        })
+        
+        
         .catch((error)=> {
             setError(error.message);
             console.log(error);
