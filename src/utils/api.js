@@ -1,21 +1,29 @@
-const BASE_URL = 'http://api.mediastack.com/v1/news';
+// const BASE_URL = 'http://api.mediastack.com/v1/news';
 
-export function fetchNews() {
-    const params = {
-        languages: 'en',
-        countries: 'us,il,ae',
-        access_key: '288269ec07157eaa27f60496ea6c8252',
-        keywords: "Israel,Palestine",
-        limit: 10
-    };
+// export function fetchNews(articleId=null) {
+//     const params = {
+//         languages: 'en',
+//         countries: 'us,il,ae',
+//         access_key: '288269ec07157eaa27f60496ea6c8252',
+//         keywords: "Israel,Palestine",
+//         limit: 10
+//     };
     
-    const urlParams = new URLSearchParams(params).toString();
-    return fetch(`${BASE_URL}?${urlParams}`)
-        .then(res => res.json())
-        .then(res => {
-            return res;
-        });
-}
+//     const urlParams = new URLSearchParams(params).toString();
+
+//     // If articleId is provided, fetch a specific article
+//     if (articleId) {
+//         return fetch(`${BASE_URL}/${articleId}?${urlParams}`)
+//             .then(res => res.json())
+//             .then(res => res);
+//     }
+//     // Otherwise, fetch a list of articles
+//     return fetch(`${BASE_URL}?${urlParams}`)
+//         .then(res => res.json())
+//         .then(res => {
+//             return res;
+//         });
+// }
 
 
 // const API_KEY = 'your_mediastack_api_key';
