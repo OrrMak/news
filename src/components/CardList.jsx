@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import NewsCard from './NewsCard.jsx';
 import './CardList.css'
 // import { fetchNews } from "../utils/api.js";
-import './../../public/localData.json'
-import { v4 as uuidv4 } from 'uuid';
+// import './../../public/localData.json'
+// import { v4 as uuidv4 } from 'uuid';
 
 
 function CardList() {
@@ -50,13 +50,12 @@ function CardList() {
         .then(data=>{
             const newArray= data.map(article => ({
                 ...article, /// same as writing title: article.title, author: article.author,date: article.date...
-                id: uuidv4(),
+                // id: uuidv4()
+                id: `${article.title.replace(/\s+/g, '-').toLowerCase()}-${article.published_at}`
             }));
             setArticles(newArray);
+            
             })
-        })
-        
-        
         .catch((error)=> {
             setError(error.message);
             console.log(error);
@@ -79,9 +78,9 @@ function CardList() {
 
     return (
         <section id='CardList'>
-            {articles.map((article,index)=>(
+            {articles.map((article)=>(
                 <NewsCard
-                    key={index}   // Use index temporarily as the key
+                    key={article.id}   // Use index temporarily as the key
                     title={article.title}
                     author={article.author}
                     date={article.published_at}

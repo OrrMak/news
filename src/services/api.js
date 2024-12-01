@@ -4,7 +4,7 @@
 //     const params = {
 //         languages: 'en',
 //         countries: 'us,il,ae',
-//         access_key: '288269ec07157eaa27f60496ea6c8252',
+//         access_key: import.meta.env.VITE_API_KEY;
 //         keywords: "Israel,Palestine",
 //         limit: 10
 //     };
